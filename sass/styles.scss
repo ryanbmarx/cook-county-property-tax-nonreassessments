@@ -15,10 +15,6 @@ $box-bg-two-nonreassessed: $trib-blue2;
 // Required for everything, too, but can be broken down into smaller explicit imports if desired. 
 @import 'base-mixins';
 
-@mixin serif(){
-	@include serif-text(15px, 1.6em);
-	margin: 0 0 18px 0;
-}
 
 // ---- MAKE OR IMPORT MORE MIXINS HERE ---------------------------------------------
 
@@ -50,12 +46,13 @@ body{
 }
 
 article{
-	max-width: 650px;
+	max-width: 1200px;
 	margin: 0 auto;
 }
 
 p{
-	@include serif();
+	@include serif-text(15px, 1.6em);
+	margin: 0 0 18px 0;
 }
 
 .tables{
@@ -99,7 +96,7 @@ p{
 		}
 
 		&--one{
-			font-size: 3.5em;
+			font-size: 2.25em;
 			margin: 0 10px 0 0;
 			color: $box-bg-one-nonreassessed;
 			display:block;
@@ -152,8 +149,17 @@ p{
 
 @media all and (min-width: $tablet-min-width){
 	// ONLY CHANGES FOR TABLETS + DESKTOPS	
+	p{ font-size: 18px; }
+
+	.table__readout--one{ font-size: 3.5em;}
+	.table__readout--two{ font-size: 1.2em;}
+
 }
 
 @media all and (min-width: $desktop-min-width){
 	// ONLY CHANGES FOR DESKTOPS
+	.box {
+    	width: 1%;
+    	padding: 0 0 3% 0;
+	}
 }
