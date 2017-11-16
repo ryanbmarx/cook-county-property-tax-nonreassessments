@@ -1,3 +1,22 @@
+{% macro table(one, two) %}
+    {% set reassessed = 1000 - (one) - (two) %}
+    
+    <div class='boxes'>
+
+    {% for box in range(0, reassessed|int) %}
+        <span class='box'></span>
+    {% endfor %}
+
+    {% for box in range(0, one|int) %}
+        <span class='box box--one'></span>
+    {% endfor %}
+
+    {% for box in range(0, two|int) %}
+        <span class='box box--two'></span>
+    {% endfor %}
+    </div>
+{% endmacro  %}
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,6 +34,34 @@
 </script>
 </head>
 <body>
-    
+    <article>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus quidem facilis hic, incidunt unde distinctio nihil dicta amet, in animi harum molestias, aliquid officiis vitae velit inventore nulla voluptate fugiat.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus quidem facilis hic, incidunt unde distinctio nihil dicta amet, in animi harum molestias, aliquid officiis vitae velit inventore nulla voluptate fugiat.</p>
+        <div class='tables'>
+            <p class='leadin'>For every 1,000 individual properties ...</p>
+            <div class='table table--houlihan'>
+                <figure class='table__mug'>
+                    <img src='img/houlihan.jpg' alt="Former Cook County Assessor James Houlihan"/>
+                    <figcaption>Houlihan</figcaption>
+                </figure>
+                {{ table(10, 1) }}
+
+                <p class='table__readout'><span class='table__readout--one'>1.1%</span> of properties had at least one identical reassessment value between 200X and 20XX. This includes <span class='table__readout--two'>0.8%</span> of properties which have three identical values.</p>
+
+            </div>
+            <div class='table table--berrios'>
+                <figure class='table__mug'>
+                    <img src='img/berrios.jpg' alt="Cook County Assessor Chris Berrios"/>
+                    <figcaption>Berrios</figcaption>
+                </figure>
+
+                {{ table(444,230) }}
+
+                <p class='table__readout'><span class='table__readout--one'>67%</span> of properties had at least one identical reassessment value between 200X and 20XX. This includes <span class='table__readout--two'>23%</span> of properties which have three identical values.</p>
+
+                
+            </div>
+        </div>
+    </article>
 </body>
 </html>
