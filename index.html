@@ -20,7 +20,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title></title>
+    <title>{{ hed }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <script src="https://pym.nprapps.org/pym.v1.min.js"></script>
     <script>
@@ -35,7 +36,7 @@
 </head>
 <body>
     <article>
-        {% if hed %}<h1>{{ hed|process_text}}</h1>{% endif %}
+        {% if hed %}<h1 class='hed'>{{ hed|process_text}}</h1>{% endif %}
         {% if intro %}{{ intro|markdown}}{% endif %}
         <p class='leadin'>{{ tables_label }}</p>
         <dl class='legend'>
