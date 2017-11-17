@@ -67,7 +67,7 @@ p{
 	@include trib-legend();
 	max-width: 170px;
 	margin: 0 auto 25px auto;
-	
+
 	span{
 		@include trib-legend__box(0);
 	}
@@ -146,9 +146,8 @@ p{
 .box{
 	// icons ... one box = one percentage point of PINs
 	display:block;
-	height: 0;
-	width: $box-dimension;
-	padding: 0 0 #{$box-dimension} 0;
+	width: 4%;
+	height: 5px;
 	background-color: $box-bg-reassessed;
 	box-sizing:border-box;
 
@@ -172,10 +171,7 @@ p{
 @media all and (min-width: $tablet-min-width){
 	// ONLY CHANGES FOR TABLETS + DESKTOPS	
 	p{ font-size: 18px; }
-	.box {
-    	width: 2%;
-    	// padding: 0 0 3% 0;
-	}
+	.box { height: 10px; }
 	.table__readout--one{ font-size: 3.5em;}
 	.table__readout--two{ font-size: 1.2em;}
 
@@ -184,14 +180,5 @@ p{
 @media all and (min-width: $desktop-min-width){
 	// ONLY CHANGES FOR DESKTOPS
 	
-	// .boxes{
-	// 	align-items:stretch;
-	// 	flex-flow: column wrap;
-	// 	height: 300px;
-	// }
-
-	.box {
-		// flex:1;
-	    padding: 0 0 2% 0;
-	}
+	.box { height: 5px; }
 }
