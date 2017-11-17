@@ -12,6 +12,10 @@ $box-bg-reassessed: $trib-gray4;
 $box-bg-one-nonreassessed: $trib-blue3;
 $box-bg-two-nonreassessed: $trib-blue2;
 
+// Da river
+$narrow-river-max-width-desktop: 650px;
+$narrow-river-max-width: 450px;
+
 // Required for everything, too, but can be broken down into smaller explicit imports if desired. 
 @import 'base-mixins';
 
@@ -67,7 +71,7 @@ section{
 }
 
 .river{
-	max-width:650px;
+	max-width:$narrow-river-max-width;
 	margin: 0 auto;
 }
 
@@ -190,6 +194,12 @@ section{
 	}
 }
 
+
+@media all and (min-width: #{$narrow-river-max-width-desktop + 60px}){
+	.river{
+		max-width: $narrow-river-max-width-desktop
+	}
+}
 
 
 @media all and (min-width: $tablet-min-width){
