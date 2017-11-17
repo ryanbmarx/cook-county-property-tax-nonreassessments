@@ -63,10 +63,31 @@ p{
 	flex-wrap:wrap;
 }
 
+.legend{
+	@include trib-legend();
+	max-width: 170px;
+	margin: 0 auto 25px auto;
+	
+	span{
+		@include trib-legend__box(0);
+	}
+
+	&__none{
+		background-color: $box-bg-reassessed;
+	}
+	&__one{
+		background-color: $box-bg-one-nonreassessed;
+	}
+	&__two{
+		background-color: $box-bg-two-nonreassessed;
+	}
+}
+
 .leadin{
-	@include sans-serif();
+	@include label7();
 	width: 100%;
 	text-align:center;
+	width: 100%;
 }
 
 .table{
@@ -77,7 +98,7 @@ p{
 		@include trib-image();
 		text-align: center;
 		max-width: 120px;
-		margin: 25px auto;
+		margin: 0 auto 25px auto;
 		
 		img{
 			border-radius: 50%;
@@ -87,10 +108,11 @@ p{
 	}
 
 	&__readout{
+		@include sans-serif();
 		text-align:center;
 
 		span{
-			font-family: 'Arial', sans-serif;
+			// font-family: 'Arial', sans-serif;
 			font-weight: bold;
 			line-height: 1em;
 		}
@@ -150,7 +172,10 @@ p{
 @media all and (min-width: $tablet-min-width){
 	// ONLY CHANGES FOR TABLETS + DESKTOPS	
 	p{ font-size: 18px; }
-
+	.box {
+    	width: 2%;
+    	// padding: 0 0 3% 0;
+	}
 	.table__readout--one{ font-size: 3.5em;}
 	.table__readout--two{ font-size: 1.2em;}
 
@@ -158,8 +183,15 @@ p{
 
 @media all and (min-width: $desktop-min-width){
 	// ONLY CHANGES FOR DESKTOPS
+	
+	// .boxes{
+	// 	align-items:stretch;
+	// 	flex-flow: column wrap;
+	// 	height: 300px;
+	// }
+
 	.box {
-    	width: 1%;
-    	padding: 0 0 3% 0;
+		// flex:1;
+	    padding: 0 0 2% 0;
 	}
 }
