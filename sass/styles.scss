@@ -181,4 +181,20 @@ p{
 	// ONLY CHANGES FOR DESKTOPS
 	
 	.box { height: 5px; }
+	.legend{
+		max-width: none;
+		text-align: center;
+		dd, dt{
+			float:none;
+			display:inline-block;;
+		}
+
+		dd{
+			margin-left: 0;
+			margin-right: 10px;
+			&:after{
+				display:inline;
+			}
+		}
+	}
 }
