@@ -50,6 +50,10 @@ article{
 	margin: 0 auto;
 }
 
+.hed{
+	@include label6();
+}
+
 p{
 	@include serif-text(15px, 1.6em);
 	margin: 0 0 18px 0;
