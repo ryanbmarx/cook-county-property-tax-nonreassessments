@@ -55,6 +55,11 @@ p{
 	margin: 0 0 18px 0;
 }
 
+.river{
+	max-width:650px;
+	margin: 0 auto;
+}
+
 .tables{
 	// Holds both graphics
 	display:flex;
@@ -161,7 +166,7 @@ p{
 	}
 }
 
-.trb_mainContent .credits {
+.credits {
 	p{
 		@include agate();
 	}

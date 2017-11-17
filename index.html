@@ -36,8 +36,11 @@
 </head>
 <body>
     <article>
-        {% if hed %}<h1 class='hed'>{{ hed|process_text}}</h1>{% endif %}
-        {% if intro %}{{ intro|markdown}}{% endif %}
+        <section class='intro river'>
+            {% if hed %}<h1 class='hed'>{{ hed|process_text}}</h1>{% endif %}
+            {% if intro %}{{ intro|markdown}}{% endif %}
+        </section>
+        <section class='charts'>
         <p class='leadin'>{{ tables_label }}</p>
         <dl class='legend'>
             <dt><span class='legend__none'></span></dt>
@@ -49,28 +52,31 @@
         </dl>
         <div class='tables'>
             <div class='table table--houlihan'>
-                <figure class='table__mug'>
+   {#              <figure class='table__mug'>
                     <img src='img/houlihan.jpg' alt="Former Cook County Assessor James Houlihan"/>
                     <figcaption>{{ houlihan_mug_caption }}</figcaption>
-                </figure>
+                </figure> #}
                 {{ table(houlihan_one_integer, houlihan_two_integer) }}
 
                 <p class='table__readout'><span class='table__readout--one'>{{ houlihan_one_identical }}</span> of properties had at least one identical value for the reassessment years of {{ houlihan_reassessment_years }}. This includes <span class='table__readout--two'>{{ houlihan_two_identical }}</span> of properties which have three identical values.</p>
 
             </div>
             <div class='table table--berrios'>
-                <figure class='table__mug'>
+{#                 <figure class='table__mug'>
                     <img src='img/berrios.jpg' alt="Cook County Assessor Chris Berrios"/>
                     <figcaption>{{ berrios_mug_caption }}</figcaption>
                 </figure>
-
+ #}
                 {{ table(berrios_one_integer,berrios_two_integer) }}
 
                 <p class='table__readout'><span class='table__readout--one'>{{ berrios_one_identical }}</span> of properties had at least one identical value for the reassessment years of {{ berrios_reassessment_years }}. This includes <span class='table__readout--two'>{{ berrios_two_identical }}</span> of properties which have three identical values.</p>
 
-                
             </div>
         </div>
+        </section>
+        <section class='credits river'>
+            {{ sources|markdown }}
+        </section>
     </article>
 </body>
 </html>
