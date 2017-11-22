@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ hed }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <script src="https://pym.nprapps.org/pym.v1.min.js"></script>
+    <script>
+    function startUpPym(){
+        var pymChild = new pym.Child({});
+        pymChild.sendHeight();
+        pymChild.sendMessage('childLoaded');
+    }
+    // Listen for the loaded event then run the pym stuff.
+    window.addEventListener('load', function() {  startUpPym(); }, false);
+</script>
+<style type="text/css">
+    #g-prd-cod-phablet{display:none;}
+    @media all and (min-width:450px){
+        #g-prd-cod-mobile{display:none;}
+        #g-prd-cod-phablet{display:block;}
+    }
+</style>
+</head>
+<body>
+    <article>
+        <section class='intro river'>
+            {% if prd_hed %}<h1 class='hed'>{{ prd_hed|process_text}}</h1>{% endif %}
+            {% if prd_intro %}{{ prd_intro|markdown}}{% endif %}
+        </section>
+        <section class='charts'>
+            {% include 'ai/ai2html-output/prd-cod.html' %}
+        </section>
+        <section class='credits river'>
+            {{ sources|markdown }}
+        </section>
+    </article>
+</body>
+</html>

@@ -1,4 +1,4 @@
-{% macro table(one, two) %}
+{% macro table(one=0, two=0) %}
     {% set reassessed = 1000 - (one) - (two) %}
     
     <div class='boxes'>
@@ -58,7 +58,7 @@
                 </figure> #}
                 {{ table(houlihan_one_integer, houlihan_two_integer) }}
 
-                <p class='table__readout'><span class='table__readout--one'>{{ houlihan_one_identical }}</span> of properties had at least one identical value for the reassessment years of {{ houlihan_reassessment_years }}. This includes <span class='table__readout--two'>{{ houlihan_two_identical }}</span> of properties which have three identical values.</p>
+                <p class='table__readout'><span class='table__readout--one'>{{ houlihan_one_identical }}</span> properties had at least two identical assessed values for the reassessment years of {{ houlihan_reassessment_years }}. This includes <span class='table__readout--two'>{{ houlihan_two_identical }}</span> of properties which have three identical values.</p>
 
             </div>
             <div class='table table--berrios'>
@@ -69,7 +69,7 @@
  #}
                 {{ table(berrios_one_integer,berrios_two_integer) }}
 
-                <p class='table__readout'><span class='table__readout--one'>{{ berrios_one_identical }}</span> of properties had at least one identical value for the reassessment years of {{ berrios_reassessment_years }}. This includes <span class='table__readout--two'>{{ berrios_two_identical }}</span> of properties which have three identical values.</p>
+                <p class='table__readout'><span class='table__readout--one'>{{ berrios_one_identical }}</span> properties had at least two identical assessed values for the reassessment years of {{ berrios_reassessment_years }}. This includes <span class='table__readout--two'>{{ berrios_two_identical }}</span> of properties which have three identical values.</p>
 
             </div>
         </div>
