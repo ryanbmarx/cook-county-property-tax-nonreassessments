@@ -73,6 +73,7 @@
         </div>
         </section>
         <section class='credits river'>
+            {% if note %}{{ note|markdown }}{% endif %}
             {{ sources|markdown }}
         </section>
     </article>
