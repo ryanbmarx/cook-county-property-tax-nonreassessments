@@ -42,26 +42,30 @@
         </section>
         <section class='charts'>
         <p class='leadin'>{{ tables_label }}</p>
-        <dl class='legend'>
+      {#   <dl class='legend'>
             <dt><span class='legend__none'></span></dt>
             <dd>{{ legend_none }}</dd>
             <dt><span class='legend__one'></span></dt>
             <dd>{{ legend_one }}</dd>
             <dt><span class='legend__two'></span></dt>
             <dd>{{ legend_two }}</dd>
-        </dl>
+        </dl> #}
         <div class='tables'>
             <div class='table table--houlihan'>
-   {#              <figure class='table__mug'>
+                <figure class='table__mug'>
                     <img src='img/houlihan.jpg' alt="Former Cook County Assessor James Houlihan"/>
                     <figcaption>{{ houlihan_mug_caption }}</figcaption>
-                </figure> #}
+                </figure>
                 {{ table(houlihan_one_integer, houlihan_two_integer) }}
 
                 <p class='table__readout'>{{ houlihan_readout|process_text }}</p>
 
             </div>
             <div class='table table--berrios'>
+                <figure class='table__mug'>
+                    <img src='img/berrios.jpg' alt="Cook County Assessor Chris Berrios"/>
+                    <figcaption>{{ berrios_mug_caption }}</figcaption>
+                </figure>
                 {{ table(berrios_one_integer,berrios_two_integer) }}
                 <p class='table__readout'>{{ berrios_readout|process_text }}</p>
 
