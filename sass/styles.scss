@@ -100,25 +100,25 @@ section{
 
 // The legend
 
-.legend{
-	@include trib-legend();
-	max-width: 170px;
-	margin: 0 auto 25px auto;
+// .legend{
+// 	@include trib-legend();
+// 	max-width: 170px;
+// 	margin: 0 auto 25px auto;
 
-	span{
-		@include trib-legend__box(0);
-	}
+// 	span{
+// 		@include trib-legend__box(0);
+// 	}
 
-	&__none{
-		background-color: $box-bg-reassessed;
-	}
-	&__one{
-		background-color: $box-bg-one-nonreassessed;
-	}
-	&__two{
-		background-color: $box-bg-two-nonreassessed;
-	}
-}
+// 	&__none{
+// 		background-color: $box-bg-reassessed;
+// 	}
+// 	&__one{
+// 		background-color: $box-bg-one-nonreassessed;
+// 	}
+// 	&__two{
+// 		background-color: $box-bg-two-nonreassessed;
+// 	}
+// }
 
 // The guts of each chart column
 
