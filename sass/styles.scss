@@ -137,6 +137,11 @@ section{
 			border: 3px solid $trib-gray4;
 			box-sizing:border-box;
 		}
+
+		figcaption{
+			font-weight: bold;
+			font-size: 16px;
+		}
 	}
 
 	&__readout{
@@ -157,11 +162,21 @@ section{
 			display:block;
 		}
 
+		&--one-text{
+			color: $box-bg-one-nonreassessed;
+			font-family: 'Arial', sans-serif;
+			font-weight: bold;	
+		}
+
 		&--two{
 			font-size: 1.5em;
 			color: $box-bg-two-nonreassessed;
-			
-			
+		}
+
+		&--two-text{
+			color: $box-bg-two-nonreassessed;
+			font-family: 'Arial', sans-serif;
+			font-weight: bold;	
 		}
 	}
 }
