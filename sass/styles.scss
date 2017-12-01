@@ -144,6 +144,12 @@ section{
 		}
 	}
 
+	&__label{
+		@include sans-serif-text(15px, 1.3em, bold);
+		margin: 0 0 10px 0;
+		text-align:center;
+	}
+
 	&__readout{
 		@include sans-serif-text(14px, 1.4em);
 		text-align:center;
