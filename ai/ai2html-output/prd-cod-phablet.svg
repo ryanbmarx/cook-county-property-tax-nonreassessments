@@ -3,7 +3,7 @@
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 450 497.303" style="enable-background:new 0 0 450 497.303;" xml:space="preserve">
 <g>
-	<rect x="-29.574" y="205.946" style="fill:#EFE7DC;" width="513.812" height="18.98"/>
+	<rect x="-29.574" y="205.946" style="fill:#EFE7DC;" width="513.812" height="14.48"/>
 	<rect x="22.825" y="420.419" style="fill:#EFE7DC;" width="427.175" height="2.75"/>
 	<g>
 		<g>
@@ -60,8 +60,8 @@
 		<g>
 			<g>
 				<g>
-					<polyline style="fill-rule:evenodd;clip-rule:evenodd;fill:none;stroke:#024E87;stroke-width:2;" points="407.687,355.487 
-						322.009,347.051 236.331,407.225 150.652,367.859 64.974,382.481 					"/>
+					<polyline style="fill-rule:evenodd;clip-rule:evenodd;fill:none;stroke:#024E87;stroke-width:2;" points="65.06,355.487 
+						150.738,347.051 236.416,407.225 322.095,367.859 407.773,382.481 					"/>
 				</g>
 			</g>
 		</g>
@@ -102,8 +102,8 @@
 	<g>
 		<g>
 			<g>
-				<polyline style="fill:none;stroke:#024E87;stroke-width:2;" points="407.773,119.694 323.031,99.005 238.29,156.37 
-					153.548,130.038 68.807,162.012 				"/>
+				<polyline style="fill:none;stroke:#024E87;stroke-width:2;" points="64.974,119.694 149.716,99.005 234.457,156.37 
+					319.199,130.038 403.94,162.012 				"/>
 			</g>
 		</g>
 	</g>
